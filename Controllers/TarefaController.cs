@@ -30,7 +30,7 @@ namespace TrilhaApiDesafio.Controllers
         [HttpGet("ObterTodos")]
         public IActionResult ObterTodos()
         {
-            var tarefa = _context.Tarefas;            
+            var tarefa = _context.Tarefas.ToList();            
             return Ok(tarefa);
         }
 
